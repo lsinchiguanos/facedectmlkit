@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">facedectmlkit</string>
+    <string name="capturar">DETECTAR</string>
 </resources>
