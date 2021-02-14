@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Bitmap bitmap = cameraKitImage.getBitmap();
                 bitmap = Bitmap.createScaledBitmap(bitmap, cameraView.getWidth(), cameraView.getHeight(), false);
                 cameraView.stop();
+                detectFace(bitmap);
             }
 
             @Override
@@ -149,7 +150,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Rect rect = face.getBoundingBox();
             RectOverlay rectOverlay = new RectOverlay(graphicOverlay, rect);
             graphicOverlay.add(rectOverlay);
-
             alertDialog.dismiss();
         }
     }
